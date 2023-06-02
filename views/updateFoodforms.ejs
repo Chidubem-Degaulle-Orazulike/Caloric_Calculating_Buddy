@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%=Recipe_Storage%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=Recipe_Storage%></h1>
+    <h2>Here are the food added to our databases:</h2>
+    <a href="/">Home</a>
+    <ul>
+    <form action="/UpdateFoodforms-result" method="POST">
+      <!-- The for each loop obtains the data containing all components regarding the food in the database then each as aspect is displayed using the format food.component  -->
+      <% availableFood.forEach(function(food) { %>
+            <p>Typical_Values_per: <input id="Typical_Values_per" type="Typical_Values_per" name="Typical_Values_per" value="<%= food.Typical_values_per%>" /></p>
+            <p>Unit_of_Typical_Values: <input id="Unit_of_Typical_Values" type="Unit_of_Typical_Values" name="Unit_of_Typical_Values" value="<%= food.Unit_of_Typical_Values%>" /></p>
+            <p>Carbs: <input id="Carbs" type="Carbs" name="Carbs" value="<%= food.Carbs%>" /></p>
+            <p>Fats: <input id="Fats" type="Fats" name="Fats" value="<%= food.Fats%>" /></p>
+            <p>Protein: <input id="Protein" type="Protein" name="Protein" value="<%= food.Protein%>" /></p>
+            <p>Salt: <input id="Salt" type="Salt" name="Salt" value="<%= food.Salt%>" /></p>
+            <p>Sugar: <input id="Sugar" type="Sugar" name="Sugar" value="<%= food.Sugar%>" /></p>
+            <input type="submit" value="Update Food" />
+      <% }) %>
+    </form>
+    <form action="/deleteFoodform" method="POST">
+        <button onclick="DeleteFunction()">Delete</button>
+
+        <script>
+        function DeleteFunction() {
+          alert("Are you sure you want to delete this record?!");
+        }
+        </script>
+    </form>
+      
+
+    </ul>
+    </body>
+</html>
+
+
+
+
+
+
+

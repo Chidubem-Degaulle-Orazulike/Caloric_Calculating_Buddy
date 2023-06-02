@@ -1,0 +1,122 @@
+/* Defining the custom font-family and colors for many different elementsof my webpage */
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --link-color: #2196f3;
+  --link-visited-color: #9c27b0;
+  --link-hover-color: white;
+  --link-active-color: #3d5afe;
+  --link-padding: 6px;
+  --link-border-radius: 6px;
+  --link-transition: all 0.4s ease;
+  --table-border-color: #2196f3;
+  --table-odd-row-bg-color: #f2f2f2;
+  --table-header-bg-color: #00bfa5;
+  --table-header-text-color: white;
+  --text-shadow: 1px 1px 2px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+/* Defining styling for h1 elements */
+h1 {
+  /* Using the custom font-family */
+  font-family: var(--font-family);
+  font-size: 33px;
+  color: #e91e63;
+  /* Adding a text shadow */
+  text-shadow: var(--text-shadow);
+}
+
+/* Defining styling for h2 elements */
+h2 {
+  font-family: var(--font-family);
+  font-size: 29px;
+  color: #9c27b0;
+  text-shadow: var(--text-shadow);
+}
+
+/* Using the custom font-family for p and li elements */
+p, li {
+  font-family: var(--font-family);
+}
+/* Defining the styling for links */
+a:link {
+  color: var(--link-color);
+  text-decoration: none;
+  padding: var(--link-padding);
+  border-radius: var(--link-border-radius);
+  /* Adding a transition effect when hovering over links */
+  transition: var(--link-transition);
+}
+
+a:visited {
+  color: var(--link-visited-color);
+  text-decoration: none;
+  padding: var(--link-padding);
+  border-radius: var(--link-border-radius);
+  transition: var(--link-transition);
+}
+
+/*
+  Defining the styling for links when the user hovers over them.
+  Using the custom properties for link hover color, padding, and border radius.
+  Changing the background color of the hover.
+  Removes the default text decoration.
+*/
+
+a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+  background-color: #e91e63;
+  padding: var(--link-padding);
+  border-radius: var(--link-border-radius);
+}
+
+
+/*
+  Defining the styling for links when they are being clicked.
+  Using the custom properties for link's active color, padding, and border radius.
+  Removes the default text decoration.
+*/
+a:active {
+  color: var(--link-active-color);
+  text-decoration: none;
+  padding: var(--link-padding);
+  border-radius: var(--link-border-radius);
+}
+
+/* Defining the styling for tables */
+table {
+  /* Removing the default space between table cells */
+  border-collapse: collapse;
+  /* Making sure the table takes up the full width of its container */
+  width: 100%;
+  border: 3px solid var(--table-border-color);
+}
+
+
+/*
+  Defining the styling for table cells.
+  Aligning the text to the left.
+  Adding padding.
+*/
+th, td {
+  text-align: left;
+  padding: 7px;
+}
+
+/*
+  Defining the styling for odd rows in tables.
+  Using the custom property for odd row background color.
+*/
+tr:nth-child(even) {
+  background-color: var(--table-odd-row-bg-color);
+}
+
+/*
+  Defining the styling for table headers.
+  Using the custom properties for header background color and text color.
+*/
+th {
+  background-color: var(--table-header-bg-color);
+  color: var(--table-header-text-color);
+}
+

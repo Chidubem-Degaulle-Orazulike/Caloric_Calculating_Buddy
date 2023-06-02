@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to <%=Recipe_Storage%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=Recipe_Storage%></h1>
+    <h2>Here are the food added to our databases:</h2>
+    <a href="/">Home</a>
+    <form action="/calculate" method="POST">
+        <table style="width:30%">
+            <tr>
+                <th>Food_Name</th>
+                <th>Typical_values_per</th>
+                <th>Unit_of_Typical_Values</th>
+                <th>Carbs</th>
+                <th>Fats</th>
+                <th>Protein</th>
+                <th>Salt</th>
+                <th>Sugar</th>
+                <th>Sum to calculate</th>
+                <th>Submit</th>
+            </tr>
+            <!-- The for each loop obtains the data containing all components regarding the food in the database then each as aspect is displayed using the format food.component  -->
+            <% availableFood.forEach(function(food) { %>
+                <tr><td><%= food.Food_Name %></td>
+                    <td><%= food.Typical_values_per%></td>
+                    <td><%= food.Unit_of_Typical_Values%></td>
+                    <td><%= food.Carbs%></td>
+                    <td><%= food.Fats%></td>
+                    <td><%= food.Protein%></td>
+                    <td><%= food.Salt%></td>
+                    <td><%= food.Sugar%></td>
+                    <td> <input type="text" name="Sum_calculate" value="" /></td>
+                    <td><input type="submit" value="Calculate"/></td>
+                    
+            <% }) %>
+            </tr>  
+        </table>
+    </form>
+    </body>
+</html>
+
+
+
+
+
+
+

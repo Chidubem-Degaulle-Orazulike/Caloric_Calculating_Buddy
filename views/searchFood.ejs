@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Search <%=Recipe_Storage%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1>Search <%=Recipe_Storage%></h1>
+    <a href="/">Home</a>
+    <form action="/searchFood-result" method="GET">
+      <p>What food are you looking for?</p>
+      <input id="search-box" type="text" name="keyword" value="Default">
+      <input type="submit" value="Search" >
+    </form>
+  </body>
+</html>

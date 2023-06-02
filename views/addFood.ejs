@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add food to <%=Recipe_Storage%></title>
+    <link rel="stylesheet"  type="text/css" href="main.css" />
+  </head>
+  <body>
+    <h1><%=Recipe_Storage%>: Add Food</h1>
+    <a href="/">Home</a>
+    <form method="POST" action="/foodAdded">
+        <p>Food_Name: <input id="Food_Name" type="text" name="Food_Name" value="" /></p>
+        <p>Typical_Values_per: <input id="Typical_Values_per" type="text" name="Typical_Values_per" value="" /></p>
+        <p>Unit_of_Typical_Values: <input id="Unit_of_Typical_Values" type="text" name="Unit_of_Typical_Values" value="" /></p>
+        <p>Carbs: <input id="Carbs" type="text" name="Carbs" value="" /></p>
+        <p>Fats: <input id="Fats" type="text" name="Fats" value="" /></p>
+        <p>Protein: <input id="Protein" type="text" name="Protein" value="" /></p>
+        <p>Salt: <input id="Salt" type="text" name="Salt" value="" /></p>
+        <p>Sugar: <input id="Sugar" type="text" name="Sugar" value="" /></p>
+        <input type="submit" value="Add Food" />
+      </form>
+  </body>
+</html>
+
